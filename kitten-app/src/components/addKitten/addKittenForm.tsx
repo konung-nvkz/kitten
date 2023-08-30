@@ -1,4 +1,6 @@
 import React, { FC, ChangeEvent, FormEvent, useState } from "react";
+import {v4} from 'uuid';
+
 import '../../components/style.css';
 import { Kitten } from "../../models/Kitten";
 
@@ -7,7 +9,7 @@ interface AddKittenFormProps {
 }
 
 const initState = {
-    id: "", 
+    id: "",
     title: "",
     age: "",
     gender: "",
@@ -29,7 +31,19 @@ const AddKittenForm: FC<AddKittenFormProps> = ({addKitten})  => {
     }
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log('handle change>>', e.target);
+        const {title, age, gender, img, isAdopted, coordinatorPhone } = newKitten;
+        if (title && age && gender && img && isAdopted && coordinatorPhone) {
+            addKitten({
+                id: v4(), 
+                title,
+                age, 
+                gender, 
+                img, 
+                isAdopted,
+                coordinatorPhone
+                }
+            );
+        }
     }
     console.log('new kitten >>>', newKitten)
     

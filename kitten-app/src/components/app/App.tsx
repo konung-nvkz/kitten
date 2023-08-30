@@ -11,6 +11,8 @@ const App: FC = () => {
     setKittenList([...kittenList, newKitten]);
   }
 
+  console.log('kittenList >>', [kittenList])
+
   return (
     <div className="App">
       <header className="App-header">
