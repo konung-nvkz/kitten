@@ -1,7 +1,7 @@
 import React, { FC, useState }  from 'react';
 import './App.css';
-import { AddKittenForm } from '../addKitten/addKittenForm';
 import { Kitten } from '../../models/Kitten';
+import AddKittenForm from '../addKitten/addKittenForm';
 
 const App: FC = () => {
 

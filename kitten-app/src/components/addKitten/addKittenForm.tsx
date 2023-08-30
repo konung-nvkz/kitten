@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { FC, ChangeEvent, FormEvent, useState } from "react";
 import '../../components/style.css';
 import { Kitten } from "../../models/Kitten";
 
