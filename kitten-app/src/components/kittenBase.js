@@ -3,7 +3,7 @@ import {v4} from 'uuid';
 const kittensBase = [
     {
         id: v4(),
-        name: 'Мурзик',
+        title: 'Мурзик',
         age: 2,
         gender: 'male',
         img: 'cat1.jpg',
@@ -12,7 +12,7 @@ const kittensBase = [
     },
     {
         id: v4(),
-        name: 'Барсик',
+        title: 'Барсик',
         age: 1,
         gender: 'male',
         img: 'cat2.jpg',
@@ -21,7 +21,7 @@ const kittensBase = [
     },
     {
         id: v4(),
-        name: 'Флорида',
+        title: 'Флорида',
         age: 3,
         gender: 'female',
         img: 'cat3.jpg',
