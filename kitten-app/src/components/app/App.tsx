@@ -1,7 +1,8 @@
 import React, { FC, useState }  from 'react';
 import './App.css';
 import { Kitten } from '../../models/Kitten';
-import AddKittenForm from '../addKitten/addKittenForm';
+import  { AddKittenForm }  from '../addKitten/addKittenForm';
+import { DisplayKitten } from '../displayKitten/displayKitten';
 
 const App: FC = () => {
 
@@ -20,7 +21,9 @@ const App: FC = () => {
           <span className='heading'>Below there will be a CATalogue of cats that need adoption</span>
           <AddKittenForm
             addKitten={addKitten}
-          />          
+          />
+          <DisplayKitten
+            kittenList={kittenList}/> 
         </div>
       </header>
     </div>
