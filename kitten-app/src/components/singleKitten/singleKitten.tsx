@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
-import { Kitten } from "../../models/Kitten";
 import EditKittenForm from "../editKittenForm/editKittenForm";
+import { Kitten } from "../../models/Kitten";
+
 
 
 type SingleKittenPropsType = {
@@ -10,6 +11,9 @@ type SingleKittenPropsType = {
 
 export function SingleKitten({kitten}: SingleKittenPropsType) {
     const [edit, setEdit] = useState<boolean>(false)
+    const handleToggleEdit = () => {
+        setEdit(!edit);
+    }
 
     return (
         <div className="kitten">
@@ -17,11 +21,13 @@ export function SingleKitten({kitten}: SingleKittenPropsType) {
             <h2>{kitten.title}</h2>
             <span> {kitten.age}</span>
             <div className="kitten-controls">
-                <AiFillEdit />
+                <AiFillEdit onClick={handleToggleEdit}/>
                 <AiFillDelete />
             </div>
             {edit
-                ?<EditKittenForm />
+                ?<EditKittenForm 
+                data={kitten}
+                />                
                 : null}
         </div>
     )
