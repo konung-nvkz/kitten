@@ -12,7 +12,6 @@ export function DisplayKitten({kittenList}: DisplayKittenPropsType) {
             {kittenList.map((kitten) => {
                 return <SingleKitten key={kitten.id} kitten={kitten}/>;
             })}
-
         </div>
     );
 }

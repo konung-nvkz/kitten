@@ -1,16 +1,13 @@
 import React, { FC, ChangeEvent, FormEvent, useState } from 'react';
-import Kitten from '../models/Kitten';
-import './styles.css';
-
-
+import { Kitten } from '../../models/Kitten';
+import '../style.css';
 interface editKittenFormProps {
     data: Kitten;
     updateKitten: (newKitten: Kitten) => void;
     handleToggleEdit: () => void;
 }
 
-
-const editKittenForm: FC<editKittenFormProps> = 
+const EditKittenForm: FC<editKittenFormProps> = 
 ({ data, updateKitten, handleToggleEdit }) => {
     const [editKitten, seteditKitten] = 
         useState<Kitten>(data);
@@ -27,9 +24,9 @@ const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    const { title, price, img } = editKitten;
+    const { title, age, img } = editKitten;
 
-    if (title && price && img) {
+    if (title && age && img) {
         updateKitten(editKitten);
         handleToggleEdit();
     }
@@ -49,11 +46,11 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         value={editKitten.title}
       />
       <input 
-        name="price"
+        name="age"
         type="text"
-        placeholder="Стоимость"
+        placeholder="Возраст"
         onChange={handleChange}
-        value={editKitten.price}
+        value={editKitten.age}
       />
       <input 
         name="img"
@@ -70,4 +67,4 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 }
 
 
-export default editKittenForm;
+export default EditKittenForm;
