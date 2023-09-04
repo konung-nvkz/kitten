@@ -5,9 +5,7 @@ import  { AddKittenForm }  from '../addKitten/addKittenForm';
 import { DisplayKitten } from '../displayKitten/displayKitten';
 
 const App: FC = () => {
-
   const [kittenList, setKittenList] = useState<Kitten[]>([]);
-
   const addKitten = (newKitten: Kitten) => {
     setKittenList([...kittenList, newKitten]);
   }
