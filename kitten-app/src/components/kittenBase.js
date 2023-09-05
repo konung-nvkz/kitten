@@ -1,6 +1,6 @@
 import {v4} from 'uuid'
 
-const kittensBase = [
+export const kittensBase = [
     {
         id: v4(),
         title: 'Мурзик',
@@ -29,5 +29,3 @@ const kittensBase = [
         coordinatorPhone: '+7 (123) 456-7890'
     },
 ];
-
-export default kittensBase

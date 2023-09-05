@@ -15,20 +15,11 @@ export function SingleKitten({kitten}: SingleKittenPropsType) {
         setEdit(!edit);
     }
 
-    // function yearNaming(number: number, titles: string[]): string {
-    //     const cases = [2, 0, 1, 1, 1, 2];
-    //     return titles[(number % 100 > 4 && number % 100 < 20) ?
-    //         2 : cases[(number % 10 < 5) ?
-    //             number % 10 : 5]
-    //     ];
-    // }    
-    // const declension: string[] = ['год', 'года', 'лет'];
-
-
     return (
         <div className="kitten">
             <img src={`/images/${kitten.img}`} alt={kitten.title}/>
             <h2>{kitten.title}</h2>
+            <h3>{kitten.isAdopted}</h3>
             <span> {kitten.age} {yearNaming(+kitten.age, declension)}</span>
             <div> {kitten.isAdopted}</div>
             <div className="kitten-controls">
