@@ -10,6 +10,10 @@ const App: FC = () => {
     setKittenList([...kittenList, newKitten]);
   }
 
+  const updateKitten = (newKitten: Kitten) => {
+    
+  }
+
   console.log('kittenList >>', [kittenList])
 
   return (
@@ -21,7 +25,9 @@ const App: FC = () => {
             addKitten={addKitten}
           />
           <DisplayKitten
-            kittenList={kittenList}/> 
+            kittenList={kittenList}
+            updateKitten={updateKitten}
+            /> 
         </div>
       </header>
     </div>
