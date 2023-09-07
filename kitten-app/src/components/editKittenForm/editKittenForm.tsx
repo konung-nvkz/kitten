@@ -23,15 +23,14 @@ export function EditKittenForm({ data, updateKitten, handleToggleEdit }: EditKit
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         
-        const { title, age, img, isAdopted } = editKitten;
+        const {title, age, gender, img, isAdopted, coordinatorPhone } = editKitten;
 
-        if (title && age && img && isAdopted) {
+        if (title && age && gender && img && isAdopted && coordinatorPhone) {
             updateKitten(editKitten);
             handleToggleEdit();
         }
     }
-
-    console.log('edit Kitten>>>>', editKitten);
+    //console.log('edit Kitten>>>>', editKitten);
 
     return (
         <form className="edit-form" onSubmit={handleSubmit}>
@@ -49,6 +48,13 @@ export function EditKittenForm({ data, updateKitten, handleToggleEdit }: EditKit
                 onChange={handleChange}
                 value={editKitten.age}
             />
+            <input
+                name="gender"
+                type="text"
+                placeholder="Пол"
+                onChange={handleChange}
+                value={editKitten.gender}         
+            />
             <input 
                 name="img"
                 type="text"
@@ -62,6 +68,13 @@ export function EditKittenForm({ data, updateKitten, handleToggleEdit }: EditKit
                 placeholder="Пристроен"
                 onChange={handleChange}
                 value={editKitten.isAdopted}        
+            />
+            <input
+                name="coordinatorPhone"
+                type="number"
+                placeholder="Телефон координатора"
+                onChange={handleChange}
+                value={editKitten.coordinatorPhone}        
             />
             <button type="submit">
                 Подтвердить

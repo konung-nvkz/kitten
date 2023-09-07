@@ -11,7 +11,13 @@ const App: FC = () => {
   }
 
   const updateKitten = (newKitten: Kitten) => {
-    
+    setKittenList(kittenList.map((kitten) => 
+      (kitten.id===newKitten.id ? newKitten : kitten)))
+  }
+
+  const deleteKitten = (id:number | string) => {
+    const newKittenList = kittenList.filter(kitten => kitten.id !== id);
+    setKittenList(newKittenList);
   }
 
   console.log('kittenList >>', [kittenList])
@@ -27,6 +33,7 @@ const App: FC = () => {
           <DisplayKitten
             kittenList={kittenList}
             updateKitten={updateKitten}
+            deleteKitten={deleteKitten}
             /> 
         </div>
       </header>

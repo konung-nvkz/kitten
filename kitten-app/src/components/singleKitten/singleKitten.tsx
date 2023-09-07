@@ -7,11 +7,12 @@ import { declension, yearNaming } from "../yearNaming/yearNaming";
 type SingleKittenPropsType = {
     kitten: Kitten;
     updateKitten:(newKitten: Kitten) => void;
-   // deleteKitten: (id:number) => void;
+    deleteKitten: (id:number|string) => void;
 }
 
-export function SingleKitten({kitten, updateKitten}: SingleKittenPropsType) {
+export function SingleKitten({kitten, updateKitten, deleteKitten}: SingleKittenPropsType) {
     const [edit, setEdit] = useState<boolean>(false)
+
     const handleToggleEdit = () => {
         setEdit(!edit);
     }
@@ -42,9 +43,3 @@ export function SingleKitten({kitten, updateKitten}: SingleKittenPropsType) {
         </div>
     )
 }
-
-
-function deleteKitten(id: string | number) {
-    throw new Error("Function not implemented.");
-}
-
