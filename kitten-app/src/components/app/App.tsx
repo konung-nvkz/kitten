@@ -15,12 +15,12 @@ const App: FC = () => {
       (kitten.id===newKitten.id ? newKitten : kitten)))
   }
 
-  const deleteKitten = (id:number | string) => {
+  const deleteKitten = (id:string) => {
     const newKittenList = kittenList.filter(kitten => kitten.id !== id);
     setKittenList(newKittenList);
   }
 
-  console.log('kittenList >>', [kittenList])
+  //console.log('kittenList >>', [kittenList])
 
   return (
     <div className="App">

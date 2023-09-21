@@ -2,7 +2,6 @@ import React, { ChangeEvent, FormEvent, useState } from "react";
 import { v4 as uuid } from 'uuid';
 import '../../components/style.css';
 import { Kitten } from "../../models/Kitten";
-import TextField from "@mui/material/TextField";
 
 type AddKittenFormProps = {
     addKitten: (newKitten: Kitten) => void;
@@ -46,7 +45,7 @@ export function AddKittenForm({ addKitten }: AddKittenFormProps) {
         }
     }
 
-    console.log('new kitten >>>', newKitten);
+    //console.log('new kitten >>>', newKitten); // put kitten to base on later edition
     
     return (
         <form onSubmit={handleSubmit}>
@@ -85,23 +84,14 @@ export function AddKittenForm({ addKitten }: AddKittenFormProps) {
                 onChange={handleChange}
                 value={newKitten.isAdopted}        
             />
-            {/* <input
+            <input
                 name="coordinatorPhone"
                 type="tel"
                 placeholder="+7(___)___-__-__"
                 onChange={handleChange}
                 value={newKitten.coordinatorPhone}
                 maxLength={18}
-            /> */}           
-            {/* <TextField variant={"standard"}
-                label="Телефон координатора"
-                //placeholder="+7(___)___-__-__"
-                fullWidth={false}
-                size={"small"}                
-                value={newKitten.coordinatorPhone} 
-                onChange={handleChange}
-                //maxLength={18}
-            /> */}
+            />   
             <button type="submit"> 
                 + Добавить в базу
             </button>

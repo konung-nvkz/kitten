@@ -1,5 +1,5 @@
 export type Kitten = {
-    id: string | number;
+    id: string;    
     title: string;
     age: string;
     gender: string;

@@ -5,7 +5,7 @@ import { Kitten } from "../../models/Kitten";
 type DisplayKittenPropsType = {
     kittenList: Kitten[];
     updateKitten:(newKitten: Kitten) => void;
-    deleteKitten:(id: number | string) => void;
+    deleteKitten:(id:string) => void;
 }
 
 export function DisplayKitten({kittenList, updateKitten, deleteKitten}: DisplayKittenPropsType) {
