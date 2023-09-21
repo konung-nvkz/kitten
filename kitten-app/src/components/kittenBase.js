@@ -8,7 +8,7 @@ export const kittensBase = [
         gender: 'male',
         img: 'kitten1.jpg',
         isAdopted: false,
-        coordinatorPhone: '+7 (123) 456-7890'
+        coordinatorPhone: '+7 (123) 456-78-90'
     },
     {
         id: v4(),
@@ -17,7 +17,7 @@ export const kittensBase = [
         gender: 'male',
         img: 'kitten2.jpg',
         isAdopted: true,
-        coordinatorPhone: '+7 (123) 456-7890'
+        coordinatorPhone: '+7 (123) 456-78-90'
     },
     {
         id: v4(),
@@ -26,6 +26,6 @@ export const kittensBase = [
         gender: 'female',
         img: 'kitten3.jpg',
         isAdopted: true,
-        coordinatorPhone: '+7 (123) 456-7890'
+        coordinatorPhone: '+7 (123) 456-78-90'
     },
 ];

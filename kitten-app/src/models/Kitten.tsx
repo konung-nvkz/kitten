@@ -5,7 +5,7 @@ export type Kitten = {
     gender: string;
     img: string;
     isAdopted: string;
-    coordinatorPhone: number;
+    coordinatorPhone: number | string;
 }
 
 
