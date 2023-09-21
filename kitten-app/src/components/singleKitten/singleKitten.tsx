@@ -8,7 +8,6 @@ type SingleKittenPropsType = {
     kitten: Kitten;
     updateKitten:(newKitten: Kitten) => void;
     deleteKitten: (id:string) => void;
-    //deleteKitten: (id:number|string) => void;
 }
 
 export function SingleKitten({kitten, updateKitten, deleteKitten}: SingleKittenPropsType) {
