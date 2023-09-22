@@ -8,7 +8,7 @@
 # testing
 /coverage
 #not working function
-/src/SelectAge
+/src/components/SelectAge
 
 # production
 /build
