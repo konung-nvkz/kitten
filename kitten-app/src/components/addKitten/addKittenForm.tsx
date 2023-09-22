@@ -27,6 +27,14 @@ export function AddKittenForm({ addKitten }: AddKittenFormProps) {
             [name]: value
         });
     }
+    // possible function to handle change on phone. 
+    // ?? to be removed later
+    // const handlePhoneChange = (value?: string) => {
+    //     setNewKitten({
+    //         ...newKitten, 
+    //         coordinatorPhone: value ?? '',
+    //     });
+    // }
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -87,11 +95,24 @@ export function AddKittenForm({ addKitten }: AddKittenFormProps) {
             <input
                 name="coordinatorPhone"
                 type="tel"
-                placeholder="+7(___)___-__-__"
+                placeholder="Телефон координатора"
                 onChange={handleChange}
                 value={newKitten.coordinatorPhone}
                 maxLength={18}
-            />   
+            /> 
+            {/* Below is a working variant without type check
+                to be removed after working library is found and imported. 
+                Please do not remove yet.
+                NB react-phone-number-input doesn't work due to hooks issue. 
+                no working solution has been found.*/}
+            {/* <input
+                name="coordinatorPhone"
+                type="tel"
+                placeholder="Телефон координатора"
+                onChange={handleChange}
+                value={newKitten.coordinatorPhone}
+                maxLength={18}
+            />    */}
             <button type="submit"> 
                 + Добавить в базу
             </button>
