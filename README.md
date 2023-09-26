@@ -7,7 +7,7 @@ According to my idea app will allow to see the base of kitten with the following
 
 - Their name;
 - Their age;
-- Sex;
+- Gender;
 - Photo;
 - Check whether a kitten is Adopted or not;
 - Phone of coordinator.
