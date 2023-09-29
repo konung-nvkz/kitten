@@ -31,7 +31,9 @@ This project was bootstrapped with the usage of:
 - [Typescript v.4.9.5](https://www.npmjs.com/package/typescript/v/4.9.5);
 - [Phone v. 3.1.40](https://www.npmjs.com/package/phone);
 
-To learn about further dependencies, please look at package.json file.
+To learn about further dependencies, please look at **package.json** file.
+
+## How to Start
 
 ## Available Scripts (adopted from React manual with minor editions)
 
