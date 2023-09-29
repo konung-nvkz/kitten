@@ -76,6 +76,27 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Project is considered to help homeless kitten obtain home. It is developed by me only.
+I am open to any new ideas, but please remember that my expirience is limited.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Current state
+
+At the moment using the app allows you:
+
+- to create the card of the kitten;
+- to update information in the card;
+- to delete it.
+
+Please note that only front-end part is developed, there is no database yet.
+
+## Plans for development
+
+ It is planned to:
+
+- refactor existing code to Typescript syntax;
+- change some inputs to selectors;
+- add database and link it with front-end;
+- enable photo upload;
+- add up pagination;
+- enable send to server;
+- improve app design
