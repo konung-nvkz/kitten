@@ -1,6 +1,16 @@
-import {v4} from 'uuid'
+import {v4} from 'uuid';
 
-export const kittensBase = [
+interface Kitten {
+    id: string;
+    title: string;
+    age: number;
+    gender: string;
+    img: string;
+    isAdopted: string | boolean;
+    coordinatorPhone: string;
+}
+
+export const kittensBase: Kitten[] = [
     {
         id: v4().toString(),
         title: 'Мурзик',
